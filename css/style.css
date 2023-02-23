@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+:root{
+    --color-1: #24292E;
+    --color-2: #2b3137;
+    --color-3: #F5BD08;
+    --color-4: #FFE9B1;
+    --color-5: #820002;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*
+    display: flex;
+    align-items: center;
+    justify-content: center;
+*/
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;   
+    position: relative;
+    background-color: var(--color-1);
+    color: white;
+    height: 100vh;
+
+    
+    /*background-color: var(--main-bg-color);*/
+}
+
+header{
+    height: 25px;
+}
+
+main{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+footer{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    /*position: absolute;*/
+    bottom: 0;
+    background: var(--color-2);
+}
+
+
+
+
+
+
+
+h1{
+    font-family: 'Abril Fatface', cursive;
+    color: var(--color-3);
+    text-shadow: 2px 1px 1px var(--color-5);
+    line-height: 0.92;
+    text-align: left;
+    font-size: 66px;
+}
+
+h2{
+    text-align: left;
+    font-size: 35px;
+    margin-top: 10px;
+    color: var(--color-4);
+    text-shadow: 2px 1px 1px var(--color-5);
+}
+
+p{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align:justify;
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.jumbo{
+    background: var(--color-2);
+    border-radius: 2em 0;
+    width: 100%;
+    padding: 15px;
+}
+
+.jumbo-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.jumbo-1{
+    width: calc(100% - 120px);
+}
+
+.jumbo-2{
+    width: 120px;
+}
+
+#imagen{
+    width: 120px;
+    border: 2px solid var(--color-1);
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.jumbo-container a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    width: 100%;
+    padding: 2px;
+    padding-left: 42px;
+    padding-right: 42px;
+    border-radius: 5px;
+    background: var(--color-1);
+    color: white;
+    border: none;
+}
+
+.jumbo-container a:hover{
+    cursor: pointer;
+    color: var(--color-5);
+    background: var(--color-3);
+    transition: 0.6s;
+}
+
+.cards{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+    justify-content:center;
+}
+
+.card{
+    width: 200px;
+    margin: 0px 10px;
+    padding: 20px;
+    cursor: default;
+    overflow: hidden;
+}
+
+/*
+.card:first-child{
+    margin-left: 0;
+}
+
+.card:last-child{
+    margin-right: 0;
+}*/
+
+.card i{
+    font-size: 50px;
+}
+
+.card span{
+    font-size: 14px;
+}
+
+.barra{
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 4px 25px 25px rgb(0, 0, 0, 0.1);
+}
+
+.progreso{
+    width: var(--w);
+    height: 100%;
+    
+    border-radius: 5px;
+    animation: Aumentar 2s ease;
+}
+
+.barra:nth-child(1){
+    background: var(--html-color);
+}
+
+.foot-link:hover{
+    color: var(--color-4);
+    transition: 0.35s;
+}
+
+/*---------------------------------------*/
+
+@keyframes Aumentar{
+    0%{width: 0%;}
+    100%{width: var(--w);}
+}
+
+@media screen and (max-width: 1000px){
+    main{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 530px){
+    h1{
+        text-align: center;
+    }
+
+    h2{
+        font-size: 25px;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    .cards{
+        flex-wrap: wrap;
+    }
+
+    #imagen{
+        opacity: 0;
+    }   
+}
+
+@media screen and (max-width: 300px){
+    h1{
+        text-align: center;
+        font-size: 52px;
+    }
+}
