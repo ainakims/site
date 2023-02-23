@@ -235,4 +235,15 @@ a{
         text-align: center;
         font-size: 52px;
     }
+    
+    .jumbo-container a{
+        width: 100%;
+        padding: 2px;
+        padding-left: 10x;
+        padding-right: 10px;
+        border-radius: 5px;
+        background: var(--color-1);
+        color: white;
+        border: none;
+    }
 }
